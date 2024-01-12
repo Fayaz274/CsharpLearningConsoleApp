@@ -18,30 +18,11 @@
                 
             }
             Console.WriteLine("****************************** Dirty Way **********************************");
+            ClassForCalculatingBonusDirtyWay dirtyClass = new ClassForCalculatingBonusDirtyWay();
             foreach (var employee in employees)
             {
+                dirtyClass.CalculateBonus(employee);
 
-                ClassForCalculatingBonusDirtyWay dirtyClass = new ClassForCalculatingBonusDirtyWay(employee);
-                if (dirtyClass.GetType().Name == "SeniorProgrammer")
-                {
-                    Console.WriteLine("The bonus of employee type " + employee.GetType().Name + " can be calculated as " + employee.BonusCalculator());
-                }
-                else if (dirtyClass.GetType().Name == "Manager")
-                {
-                    Console.WriteLine("The bonus of employee type " + employee.GetType().Name + " can be calculated as " + employee.BonusCalculator());
-                }
-                else if (dirtyClass.GetType().Name == "Programmer")
-                {
-                    Console.WriteLine("The bonus of employee type " + employee.GetType().Name + " can be calculated as " + employee.BonusCalculator());
-                }
-                else if (dirtyClass.GetType().Name == "CareTaker")
-                {
-                    Console.WriteLine("The bonus of employee type " + employee.GetType().Name + " can be calculated as " + employee.BonusCalculator());
-                }
-                else
-                {
-                    Console.WriteLine("Object not found");
-                }
             }
             Console.ReadLine();
         }
