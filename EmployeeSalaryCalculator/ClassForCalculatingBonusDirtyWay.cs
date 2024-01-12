@@ -8,13 +8,35 @@ namespace EmployeeSalaryCalculator
 {
     internal class ClassForCalculatingBonusDirtyWay
     {
-        private EmployeeBaseClass employee;
-
-        public ClassForCalculatingBonusDirtyWay(EmployeeBaseClass employee)
+        public ClassForCalculatingBonusDirtyWay()
         {
-            this.employee = employee;
+            
         }
 
+
+        public void CalculateBonus(EmployeeBaseClass employee) 
+        {
+            if (employee.GetType().Name == "SeniorProgrammer")
+            {
+                Console.WriteLine("The bonus of employee type " + employee.GetType().Name + " can be calculated as " + employee.BonusCalculator());
+            }
+            else if (employee.GetType().Name == "Manager")
+            {
+                Console.WriteLine("The bonus of employee type " + employee.GetType().Name + " can be calculated as " + employee.BonusCalculator());
+            }
+            else if (employee.GetType().Name == "Programmer")
+            {
+                Console.WriteLine("The bonus of employee type " + employee.GetType().Name + " can be calculated as " + employee.BonusCalculator());
+            }
+            else if (employee.GetType().Name == "CareTaker")
+            {
+                Console.WriteLine("The bonus of employee type " + employee.GetType().Name + " can be calculated as " + employee.BonusCalculator());
+            }
+            else
+            {
+                Console.WriteLine("Object not found");
+            }
+        }
        
     }
 }
